@@ -20,6 +20,21 @@ app.get('/hello', (req, res) => {
     // Send Hello World
     res.send('Welcome to GET Route: Hello World! ');
 });
+//  ejercicio:
+app.get('/ejercicio1', (req, res) => {
+    const data = {
+        message: 'Goobye, world'
+    };
+    res.status(200).json({ data });
+});
+// ejercicio 2
+app.get('/ejercicio2', (req, res) => {
+    const name = req.query.name || 'Anonimo';
+    const data = {
+        message: `Hola, ${name}`
+    };
+    res.status(200).json({ data });
+});
 //Execute App and Listen Requests to PORT
 app.listen(port, () => console.log(`EXPRESS SERVER: Running at http://localhost:${port}`));
 //# sourceMappingURL=index.js.map
