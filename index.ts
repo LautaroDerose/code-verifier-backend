@@ -21,27 +21,26 @@ app.get('/hello', (req: Request, res: Response) => {
 });
 
 
-//  ejercicio:
-
-app.get('/ejercicio1', (req: Request, res: Response) => {
-  const data = {
-    message: 'Goobye, world'
-  };
-  res.status(200).json({ data });
-});
-
-// ejercicio 2
-app.get('/ejercicio2', (req: Request, res: Response) => {
-  const name = req.query.name || 'Anonimo';
-  const data = {
-    message: `Hola, ${name}`
-  };
-  res.status(200).json({ data });
-});
-
-
 //Execute App and Listen Requests to PORT
 app.listen(port, () => 
-  console.log(`EXPRESS SERVER: Running at http://localhost:${port}`)
+console.log(`EXPRESS SERVER: Running at http://localhost:${port}`)
 )
 
+
+/////////////////////////////////////////////////////////////////////
+//  ejercicio1:
+// app.get('/ejercicio1', (req: Request, res: Response) => {
+//   const data = {
+//     message: 'Goobye, world'
+//   };
+//   res.status(200).json({ data });
+// });
+// ejercicio 2
+// app.get('/ejercicio2', (req: Request, res: Response) => {
+//   const name = req.query.name || 'Anonimo';
+//   const data = {
+//     message: `Hola, ${name}`
+//   };
+//   res.status(200).json({ data });
+// });
+////////////////////////////////////////////////////////////////////
